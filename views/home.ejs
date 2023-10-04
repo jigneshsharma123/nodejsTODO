@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">TODO App</h1>         
+        
+        <!-- User Form -->
+        <form action="add-task/" method="POST" class="user-form">
+            <input type="text" id="taskDescription" name="taskDescription" placeholder="Enter task description" required>
+            <div class="task-details">
+                <input type="text" name="category" id="category" placeholder="Category">
+                <input type="date" name="dueDate" id="dueDate">
+            </div>
+          <div class="btn-container">
+            <button id="addTask" class="btn" type="submit">+ Add Task</button>
+            <button id="deleteTask" form="delete-form" type="submit" class="btn">Delete Task</button>
+          </div>   
+        </form>
+        
+       <!-- Task List -->
+       
+    <form id="delete-form" action="/delete-task" method="POST">
+<ul class="task-list">
+    <% tasks.forEach(task => { %>
+        <li data-task-id="<%= task._id %>">
+            <input type="checkbox" class="check-box" name="taskCompleted" value="<%= task._id %>">
+            <%= task.description %>
+            <span class="task-category"><%= task.category %></span>
+            <span class="task-due-date"><%= task.dueDate.toDateString() %></span>
+       
+        </li>
+    <% }); %>
+</ul>
+</form>
+    </div>
+</body>
+</html>

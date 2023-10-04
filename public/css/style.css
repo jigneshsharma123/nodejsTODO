@@ -1,0 +1,97 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:#333;
+}
+
+.heading {
+    text-align: center;
+}
+
+.user-form {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 20px 0;
+}
+
+.user-form input[type="text"],
+.user-form input[type="date"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task-details {
+    display: flex;
+    justify-content: space-between;
+}
+.task-details #category 
+{
+    border-right:1px solid #333;
+}
+
+.btn {
+    display: block;
+    /* margin: 10px auto; */
+    /* padding: 10px 20px; */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.check-box {
+    margin-right: 10px;
+}
+
+.task-category,
+.task-due-date {
+    margin-left: auto;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left:22.4%;
+    
+    
+}
+.btn-container button {
+    padding:20px 30px;
+    font-size:20px;
+    border-radius: 2px;
+    margin:5px;
+}
+.btn-container #deleteTask {
+    background-color: red;
+}
